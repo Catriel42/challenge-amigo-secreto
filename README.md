@@ -23,6 +23,10 @@ This project is a simple web application to organize a **Secret Friend** draw. I
 3. Repeat for all participants.
 4. Click "Draw friend" to randomly select a secret friend.
 
+<video src="/how-it-woks-video.webm" controls width="500">
+  Your browser does not support the video tag.
+</video>
+
 ## Detailed Explanation of the Main Functions
 
 ### 1. `addFriend()`
