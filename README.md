@@ -23,7 +23,7 @@ This project is a simple web application to organize a **Secret Friend** draw. I
 3. Repeat for all participants.
 4. Click "Draw friend" to randomly select a secret friend.
 
-<video src="/how-it-woks-video.webm" controls width="500">
+<video src="/how-it-works-demo.mp4" controls width="100%">
   Your browser does not support the video tag.
 </video>
 
