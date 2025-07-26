@@ -1,6 +1,6 @@
 # Secret Friend (Amigo Secreto)
 
-This project is a simple web application to organize a **Secret Friend** (also known as "Secret Santa") draw. It allows you to enter participant names, display them in a list, and randomly select a secret friend from the list.
+This project is a simple web application to organize a **Secret Friend** draw. It allows you to enter participant names, display them in a list, and randomly select a secret friend from the list.
 
 ## Features
 
@@ -23,6 +23,33 @@ This project is a simple web application to organize a **Secret Friend** (also k
 3. Repeat for all participants.
 4. Click "Draw friend" to randomly select a secret friend.
 
+## Detailed Explanation of the Main Functions
+
+### 1. `addFriend()`
+
+This function is triggered when the user clicks the "Add" button.  
+
+- It retrieves the value from the input field (`newFriendName.value`).
+- If the input is empty, it shows an alert asking the user to enter a name.
+- If the input is valid, it adds the name to the `friends` array, clears the input field, and calls `updateFriendList()` to refresh the displayed list.
+
+### 2. `updateFriendList()`
+
+This function updates the list of friends shown on the page.
+
+- It first clears the current list by setting `listAddedFriends.innerHTML = ""`.
+- Then, it iterates over the `friends` array and creates a `<li>` element for each name.
+- Each `<li>` is appended to the `<ul>` with the ID `listFriends`, ensuring the displayed list matches the current state of the array.
+
+### 3. `drawFriend()`
+
+This function is triggered when the user clicks the "Draw friend" button.
+
+- It checks if there are any friends in the list. If not, it alerts the user to add friends first.
+- If there are friends, it clears any previous result from the `secretFriend` list.
+- It generates a random index to select a name from the `friends` array.
+- It creates a `<li>` element displaying the randomly selected friend and appends it to the `<ul>` with the ID `secretFriend`.
+
 ## HTML Integration
 
 Make sure your `index.html` includes the JavaScript file at the end of the `<body>`:
@@ -44,9 +71,9 @@ It is recommended to use the **Live Server** extension in Visual Studio Code to 
 To use it:
 
 1. Install the "Live Server" extension from the VS Code marketplace.
-2. Right-click on `index.html` and select **"Open with Live Server"**.
+2. Right-click on `index.html` and select **"Open with Live Server"** (you can use the follow commands also: Alt+L Alt+O).
 3. Your browser will open automatically, showing the app and updating every time you save changes.
 
 ---
 
-Enjoy organizing your Secret Friend draw quickly
+Enjoy organizing your Secret Friend draw quickly and easily!
