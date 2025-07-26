@@ -1,5 +1,6 @@
 let friends = [];
 let newFriendName = document.getElementById("friend");
+let listAddedFriends = document.getElementById("listFriends");
 
 function addFriend(){
     addingName = newFriendName.value;
@@ -8,6 +9,16 @@ function addFriend(){
     } else {
         friends.push(addingName);
         newFriendName.value = "";
-        console.log(addingName);
-    }   
+        updateFriendList();
+    }
+}
+
+function updateFriendList(){
+    listAddedFriends.innerHTML = "";
+    for (let i = 0; i  < friends.length; i++) {
+        let li = document.createElement("li");
+        li.textContent = friends[i];
+        listAddedFriends.appendChild(li);
+        
+    }
 }
